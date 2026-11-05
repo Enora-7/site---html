@@ -1,0 +1,457 @@
+/* Pink background */
+body {
+   background: linear-gradient(135deg, #ffc0cb, #ffb6d9, #f8a5c2);
+    min-height: 100vh;
+    margin: 0;
+    cursor: default;
+}
+
+/* Star trail */
+.star {
+    position: fixed;
+    pointer-events: none;
+    color: #ffffff;
+    font-size: 18px;
+    z-index: 9999;
+    animation: starFade 0.8s ease-out forwards;
+    text-shadow: 0 0 8px #ff69b4, 0 0 15px #ffffff;
+}
+
+/* Star animation */
+@keyframes starFade {
+    0% {
+        opacity: 1;
+        transform: scale(0.5) rotate(0deg);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(1.5) rotate(180deg) translateY(-20px);
+    }
+}
+       <style>
+    /* ===== GLOBAL TEXT STYLE ===== */
+
+    body {
+        color: #fff1fa;
+
+        font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+        font-size: 15px;
+        line-height: 1.5;
+
+        margin: 0;
+        padding: 40px;
+
+        letter-spacing: 0.3px;
+        text-align: center;
+    }
+
+    /* ===== HEADINGS ===== */
+
+    h1, h2, h3, h4, h5, h6 {
+        color: #fff1fa;
+
+        font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+
+        font-weight: 600;
+        letter-spacing: 1px;
+
+        text-shadow:
+            0 0 8px rgba(216, 199, 255, 0.35);
+		text-align: center;
+			
+    }
+
+    h1 {
+        font-size: 42px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+
+    /* ===== LINKS ===== */
+
+    a {
+        color: #fff1fa;
+        text-decoration: none;
+
+        border-bottom: 1px solid transparent;
+
+        transition:
+            color 0.2s ease,
+            border-color 0.2s ease,
+            text-shadow 0.2s ease;
+    }
+
+    a:hover {
+        color: #ffffff;
+
+        border-bottom-color: #d8c7ff;
+
+        text-shadow:
+            0 0 8px #d8c7ff,
+            0 0 16px rgba(216, 199, 255, 0.5);
+    }
+
+    /* ===== NORMAL TEXT ===== */
+
+    p, li, span, strong, em {
+        color: #fff1fa;
+    }
+
+    /* ===== CODE ===== */
+
+    code {
+        color: #d8c7ff;
+        background: rgba(216, 199, 255, 0.08);
+
+        padding: 3px 7px;
+        border-radius: 5px;
+    }
+
+</style>
+
+
+/* Style général du tableau */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+    font-size: 14px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* En-tête */
+table thead th {
+    background-color: #2563eb;
+    color: white;
+    padding: 14px 16px;
+    text-align: left;
+    font-weight: 600;
+    border: none;
+}
+
+/* Cellules */
+table td {
+    padding: 24px 64px;
+    border-bottom: 1px solid #e5e7eb;
+    color: #374151;
+}
+
+/* Lignes alternées */
+table tbody tr:nth-child(even) {
+    background-color: #f3f6fb;
+}
+
+/* Effet au survol */
+table tbody tr:hover {
+    background-color: #ff1d8e;
+    transition: background-color 0.2s ease;
+}
+
+/* Dernière ligne */
+table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Text color in both table columns */
+table td,
+table td ul,
+table td ul li {
+    color: #800080;
+}
+
+/* Video container */
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    aspect-ratio: 16 / 9;
+    margin: 0 auto 40px auto;
+}
+
+/* Make the video fill its container */
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Style the song title */
+.song-title {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+/* Add space above the table */
+table {
+    margin-top: 40px;
+}
+
+/* ===== CENTER ALL WEBSITE TEXT ===== */
+
+body {
+    text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6,
+p, a, label {
+    text-align: center;
+}
+
+/* ===== HAMBURGER MENU ===== */
+
+/* Three-line menu button */
+.menu-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1002;
+
+    background: #ff69b4;
+    color: white;
+    border: none;
+    border-radius: 10px;
+
+    padding: 10px 15px;
+    font-size: 28px;
+    cursor: pointer;
+
+    box-shadow: 0 4px 10px rgba(255, 105, 180, 0.3);
+    transition: background 0.3s ease;
+}
+
+.menu-button:hover {
+    background: #ff1493;
+}
+
+/* Dark transparent background behind the menu */
+.menu-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+
+    background: rgba(50, 0, 30, 0.3);
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Sidebar */
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1001;
+
+    width: 260px;
+    max-width: 80%;
+    height: 100vh;
+    box-sizing: border-box;
+    padding: 70px 25px 25px;
+
+    background: linear-gradient(180deg, #ffc0cb, #ff69b4);
+    box-shadow: 4px 0 15px rgba(0, 0, 0, 0.15);
+
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+
+    text-align: center;
+}
+
+/* Menu title */
+.side-menu h2 {
+    color: white;
+    margin-bottom: 30px;
+}
+
+/* Links inside the menu */
+.side-menu a {
+    display: block;
+    padding: 15px 10px;
+    margin-bottom: 10px;
+
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bold;
+
+    border-radius: 10px;
+    transition: background 0.2s ease;
+}
+
+.side-menu a:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Close button */
+.close-menu {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+
+    background: transparent;
+    border: none;
+    color: white;
+
+    font-size: 35px;
+    cursor: pointer;
+}
+
+/* Open state */
+.side-menu.open {
+    transform: translateX(0);
+}
+
+.menu-overlay.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Keep the menu above the rest of the page */
+.menu-button,
+.side-menu,
+.menu-overlay {
+    font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+}
+
+/* ===== HORIZONTAL CONTENT SLIDER ===== */
+
+.content-slider {
+    width: 100%;
+    max-width: 1000px;
+    margin: 50px auto;
+    box-sizing: border-box;
+}
+
+.slider-title {
+    text-align: center;
+    color: #fff1fa;
+    margin-bottom: 25px;
+}
+
+.slider-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* The horizontal row */
+.slider-track {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+
+    flex: 1;
+    min-width: 0;
+    padding: 15px 8px 25px;
+
+    scrollbar-width: none;
+}
+
+.slider-track::-webkit-scrollbar {
+    display: none;
+}
+
+/* Individual rectangles */
+.slider-card {
+    flex: 0 0 240px;
+    min-height: 150px;
+    box-sizing: border-box;
+
+    padding: 25px 20px;
+    border-radius: 18px;
+
+    background: rgba(255, 255, 255, 0.85);
+    box-shadow: 0 5px 15px rgba(180, 50, 120, 0.18);
+
+    color: #800080;
+    text-align: center;
+
+    scroll-snap-align: start;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.slider-card h3 {
+    color: #d63384;
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+.slider-card p {
+    color: #800080;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Hover effect */
+@media (hover: hover) {
+    .slider-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 9px 22px rgba(180, 50, 120, 0.25);
+    }
+}
+
+/* Navigation arrows */
+.slider-arrow {
+    flex: 0 0 42px;
+    width: 42px;
+    height: 42px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #ff69b4;
+    color: white;
+
+    font-size: 18px;
+    cursor: pointer;
+
+    box-shadow: 0 3px 10px rgba(180, 50, 120, 0.2);
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.slider-arrow:hover {
+    background: #ff1493;
+    transform: scale(1.08);
+}
+
+.slider-arrow:focus-visible {
+    outline: 3px solid #800080;
+    outline-offset: 3px;
+}
+
+/* Smaller screens */
+@media (max-width: 600px) {
+    .slider-container {
+        gap: 6px;
+    }
+
+    .slider-arrow {
+        flex-basis: 34px;
+        width: 34px;
+        height: 34px;
+        font-size: 15px;
+    }
+
+    .slider-card {
+        flex-basis: 200px;
+    }
+}

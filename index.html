@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Website</title>
+
+    <!-- Connect CSS -->
+    <link rel="stylesheet" href="mon_style.css">
+</head>
+
+<body>
+<!-- Hamburger menu button -->
+<button id="menu-button" class="menu-button" aria-label="Open menu" aria-expanded="false">
+    ☰
+</button>
+
+<!-- Menu overlay -->
+<div id="menu-overlay" class="menu-overlay"></div>
+
+<!-- Sidebar menu -->
+<nav id="side-menu" class="side-menu">
+    <button id="close-menu" class="close-menu" aria-label="Close menu">
+        &times;
+    </button>
+
+    <h2>My Website 💗</h2>
+
+    <a href="index.html">Home</a>
+    <a href="page 1.html">Queen B</a>
+    <a href="page 2.html">BTS</a>
+    <a href="contacts.html">Contacts</a>
+</nav>
+
+    <h1>Welcome to my website! 💗</h1>
+    <!-- Your page content goes here -->
+
+	<h3>Here's a peak of my musical world!</h3>
+
+<h2>On loop at the moment</h2>
+
+<div style="position: relative; width: 100%; max-width: 800px; aspect-ratio: 16 / 9; margin: 0 auto;">
+    <iframe
+        src="https://www.youtube.com/embed/lIxQe1R5hs0"
+        title="My song of the moment"
+        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen>
+    </iframe>
+</div>
+
+<!-- ===== CONTENT SLIDER ===== -->
+<section class="content-slider">
+
+    <h2 class="slider-title">Latest news 💗</h2>
+
+    <div class="slider-container">
+
+        <!-- Previous arrow -->
+        <button class="slider-arrow prev" aria-label="Previous cards">
+            &#10094;
+        </button>
+
+        <!-- Sliding cards -->
+        <div class="slider-track">
+
+            <div class="slider-card">
+                <h3>BTS 💜</h3>
+                <p>28/10/2026 : first concert in Brazil.</p>
+            </div>
+
+            <div class="slider-card">
+                <h3>BTS 💜</h3>
+                <p>24/10/2026 : 2.0 MV is over 200M views on Youtube.</p>
+            </div>
+
+            <div class="slider-card">
+                <h3>Beyonce 🐝</h3>
+                <p>Beyonce on the cover of the October issue of I-D magazine.</p>
+            </div>
+
+            <div class="slider-card">
+                <h3>BTS 💜</h3>
+                <p>20/10/2026 : BT21 figurines are available at McDonald's in Happy Meals until Nov. 23, 2026.</p>
+            </div>
+
+            <div class="slider-card">
+                <h3>Beyonce 🐝</h3>
+                <p>04/09/2026 : B'day the 20th aniversary has been released.</p>
+            </div>
+
+        </div>
+
+        <!-- Next arrow -->
+        <button class="slider-arrow next" aria-label="Next cards">
+            &#10095;
+        </button>
+
+    </div>
+</section>
+    <!-- Connect JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
